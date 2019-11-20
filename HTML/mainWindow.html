@@ -5,28 +5,30 @@
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.css" />
   </head>
   <body style="background-image: url(bg.jpg);">
-    <div class="container">
-      <h1
+    <form action="">
+
+      <div class="container">
+        <h1
         style="text-align: center; margin-top: 10%; color: honeydew; font-weight: bolder; text-shadow: 2px 2px black;"
-      >
+        >
         Expo Regestration System
       </h1>
-
+      
       <div style="margin-top: 10%;">
-        <!-- <div class="input-group mb-3">
-          <div class="input-group-prepend"></div>
-          <input
+          <!-- <div class="input-group mb-3">
+            <div class="input-group-prepend"></div>
+            <input
             type="text"
             class="form-control"
             aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-default"
             placeholder="Full Name"
-          />
-        </div> -->
-
-        <div class="input-group mb-3">
-          <div class="input-group-prepend"></div>
-          <input
+            />
+          </div> -->
+          
+          <div class="input-group mb-3">
+            <div class="input-group-prepend"></div>
+            <input
             type="email"
             class="form-control"
             aria-label="Sizing example input"
@@ -38,16 +40,16 @@
         <!-- <div class="input-group mb-3">
           <div class="input-group-prepend"></div>
           <input
-            type="number"
-            class="form-control"
-            aria-label="Sizing example input"
-            aria-describedby="inputGroup-sizing-default"
-            placeholder="Mobile Number"
+          type="number"
+          class="form-control"
+          aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default"
+          placeholder="Mobile Number"
           />
         </div> -->
-
+        
         <div class="input-group mb-3">
-          <select class="custom-select" id="inputGroupSelect01">
+          <select class="custom-select" id="inputGroupSelect01" >
             <option selected>Choose...</option>
             <option value="1">Day 1</option>
             <option value="2">Day 2</option>
@@ -57,13 +59,15 @@
             <option value="6">Day 6</option>
           </select>
         </div>
-
-        <button type="button" class="btn btn-success btn-lg" disabled>
+        
+        <button type="submit" class="btn btn-success btn-lg" disabled>
           Submit
         </button>
       </div>
     </div>
-
-    <script src="./bootstrap/js/bootstrap.js"></script>
+  </form>
+  
+    <!-- <script src="./bootstrap/js/bootstrap.js"></script> -->
+    <script src="./verification.js"></script>
   </body>
-</html>
+  </html>
