@@ -4,7 +4,7 @@
     <title>REG</title>
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.css" />
   </head>
-  <body style="background-image: url(abf9c465090cf95b6fe08ec816e365d0.jpg);">
+  <body style="background-image: url(bg.jpg);">
     <div class="container">
       <h1
         style="text-align: center; margin-top: 10%; color: honeydew; font-weight: bolder; text-shadow: 2px 2px black;"
@@ -13,7 +13,7 @@
       </h1>
 
       <div style="margin-top: 10%;">
-        <div class="input-group mb-3">
+        <!-- <div class="input-group mb-3">
           <div class="input-group-prepend"></div>
           <input
             type="text"
@@ -22,12 +22,12 @@
             aria-describedby="inputGroup-sizing-default"
             placeholder="Full Name"
           />
-        </div>
+        </div> -->
 
         <div class="input-group mb-3">
           <div class="input-group-prepend"></div>
           <input
-            type="text"
+            type="email"
             class="form-control"
             aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-default"
@@ -35,27 +35,30 @@
           />
         </div>
 
-        <div class="input-group mb-3">
+        <!-- <div class="input-group mb-3">
           <div class="input-group-prepend"></div>
           <input
-            type="text"
+            type="number"
             class="form-control"
             aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-default"
             placeholder="Mobile Number"
           />
-        </div>
+        </div> -->
 
         <div class="input-group mb-3">
           <select class="custom-select" id="inputGroupSelect01">
             <option selected>Choose...</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+            <option value="1">Day 1</option>
+            <option value="2">Day 2</option>
+            <option value="3">Day 3</option>
+            <option value="4">Day 4</option>
+            <option value="5">Day 5</option>
+            <option value="6">Day 6</option>
           </select>
         </div>
 
-        <button type="button" class="btn btn-secondary btn-lg">
+        <button type="button" class="btn btn-success btn-lg" disabled>
           Submit
         </button>
       </div>
