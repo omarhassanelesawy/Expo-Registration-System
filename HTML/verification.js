@@ -29,10 +29,30 @@ var buttonEnable = () => {
 }
 
 // Submission
-form.addEventListener("submit", (e) => {
+but.addEventListener("click", (e) => {
     e.preventDefault();
+    if (form.checkValidity())
+        successAppearance();
+    else
+        dangerAppearance();
+})
+
+var successAppearance = () => {
+    var div = document.querySelector(".alert-success");
+    div.classList.replace("d-none", "d-block");
     email.value = "";
     but.disabled = true;
-})
+    setTimeout(() => {
+        div.classList.replace("d-block", "d-none");
+    }, 3000);
+}
+
+var dangerAppearance = () => {
+    var div = document.querySelector(".alert-danger");
+    div.classList.replace("d-none", "d-block");
+    setTimeout(() => {
+        div.classList.replace("d-block", "d-none");
+    }, 3000);
+}
 
 
