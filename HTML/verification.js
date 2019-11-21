@@ -39,20 +39,22 @@ but.addEventListener("click", (e) => {
 
 var successAppearance = () => {
     var div = document.querySelector(".alert-success");
+    document.querySelector(".alert-danger").classList.replace("d-block","d-none");
     div.classList.replace("d-none", "d-block");
     email.value = "";
     but.disabled = true;
     setTimeout(() => {
         div.classList.replace("d-block", "d-none");
-    }, 3000);
+    }, 5000);
 }
 
 var dangerAppearance = () => {
+    document.querySelector(".alert-success").classList.replace("d-block","d-none");
     var div = document.querySelector(".alert-danger");
     div.classList.replace("d-none", "d-block");
     setTimeout(() => {
         div.classList.replace("d-block", "d-none");
-    }, 3000);
+    }, 5000);
 }
 
 
