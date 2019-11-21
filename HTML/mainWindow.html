@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>REG</title>
-    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css" />
-  </head>
-  <body style="background-image: url(bg.jpg);">
-    <form action="">
 
-      <div class="container">
-        <h1
-        style="text-align: center; margin-top: 10%; color: honeydew; font-weight: bolder; text-shadow: 2px 2px black;"
-        >
+<head>
+  <title>REG</title>
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.css" />
+</head>
+
+<body style="background-image: url(bg.jpg);">
+  <div class="d-flex">
+    <img src="./aceslogo.png" style="width:150px" class="m-2" alt="aceslogo">
+    <div class="align-content-cente w-100 mr-5 mt-5">
+      <h1 style="text-align: center; color: honeydew; font-weight: bolder; text-shadow: 2px 2px black;">
         Expo Regestration System
       </h1>
-      
+      <h2 style="text-align: center; color: honeydew; font-weight: bolder; text-shadow: 2px 2px black;">
+        Life changing experience</h2>
+    </div>
+  </div>
+  <form action="">
+
+    <div class="container">
       <div style="margin-top: 10%;">
-          <!-- <div class="input-group mb-3">
+        <!-- <div class="input-group mb-3">
             <div class="input-group-prepend"></div>
             <input
             type="text"
@@ -25,16 +31,11 @@
             placeholder="Full Name"
             />
           </div> -->
-          
-          <div class="input-group mb-3">
-            <div class="input-group-prepend"></div>
-            <input
-            type="email"
-            class="form-control"
-            aria-label="Sizing example input"
-            aria-describedby="inputGroup-sizing-default"
-            placeholder="Email"
-          />
+
+        <div class="input-group mb-3">
+          <div class="input-group-prepend"></div>
+          <input type="email" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default" placeholder="Email" />
         </div>
 
         <!-- <div class="input-group mb-3">
@@ -47,9 +48,9 @@
           placeholder="Mobile Number"
           />
         </div> -->
-        
+
         <div class="input-group mb-3">
-          <select class="custom-select" id="inputGroupSelect01" >
+          <select class="custom-select" id="inputGroupSelect01">
             <option selected>Choose...</option>
             <option value="1">Day 1</option>
             <option value="2">Day 2</option>
@@ -59,15 +60,25 @@
             <option value="6">Day 6</option>
           </select>
         </div>
-        
-        <button type="submit" class="btn btn-success btn-lg" disabled>
+
+        <button type="submit" class="btn btn-success btn-lg mb-3" disabled>
           Submit
         </button>
+        <!-- Alert Div -->
+        <div class="alert alert-danger mb-3 d-none" role="alert">
+          Re-write your email carefully, Please!
+        </div>
+        <div class="alert alert-success mb-3 d-none" role="alert">
+          Successfully Submitted
+        </div>
       </div>
     </div>
   </form>
-  
-    <!-- <script src="./bootstrap/js/bootstrap.js"></script> -->
-    <script src="./verification.js"></script>
-  </body>
-  </html>
+  <div class="card-footer bg-success font-weight-bold text-uppercase text-center fixed-bottom ">
+    ©ACES'20 IT Team All Rights Reserved
+  </div>
+  <!-- <script src="./bootstrap/js/bootstrap.js"></script> -->
+  <script src="./verification.js"></script>
+</body>
+
+</html>
