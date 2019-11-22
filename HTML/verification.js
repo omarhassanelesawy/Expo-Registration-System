@@ -2,7 +2,6 @@
 const fs = require("fs");
 const os = require("os");
 const path = "./email";
-const name = path + "/" + os.hostname() + "DAY" + data.day + ".txt";
 function init_Folder() {
   if (fs.existsSync(path)) {
     console.log("The email has been saved successfully.");
@@ -14,6 +13,7 @@ function init_Folder() {
   }
 }
 init_Folder();
+const name = path + "/" + os.hostname() + "DAY" + data.day + ".txt";
 // Add to specific file a content
 function append_data(data) {
   fs.appendFile(name, JSON.stringify(data) + ",", function(err) {
@@ -22,8 +22,10 @@ function append_data(data) {
   });
 }
 function read_data(day) {
-  if (fs.existsSync(path)) {
-    fs.readFile("./Index.html", function read(err, data) {
+  const name = path + "/" + os.hostname() + "DAY" + day + ".txt";
+
+  if (fs.existsSync(name)) {
+    fs.readFile(name, function read(err, data) {
       if (err) {
         throw err;
       }
