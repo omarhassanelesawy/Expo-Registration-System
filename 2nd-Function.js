@@ -1,5 +1,5 @@
 const fs = require('fs');
-const path = './file';
+const name = './file';
 function Reader(){
 fs.appendFile(path, 'Hello content!', function (err) {
     if (err) throw err;
