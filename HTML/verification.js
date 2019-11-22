@@ -57,4 +57,29 @@ var dangerAppearance = () => {
     }, 5000);
 }
 
+// File System
+
+//Create Directory
+const fs = require('fs');
+const path = './email';
+function checker (){
+  if (fs.existsSync(path)) {
+    console.log('The email has been saved successfully.');
+  }
+  else{
+    fs.mkdir('./email', (err) => {
+        if (err) throw err;
+        console.log('The email has been created.');
+      });
+    };};
+  
+// Add to specific file a content 
+const name = './file';
+function Reader(){
+fs.appendFile(name, 'Hello content!', function (err) {
+    if (err) throw err;
+    console.log('Saved!');
+  });};
+
+
 
