@@ -8,7 +8,11 @@ let mainWindow;
 let addWindow;
 
 app.on("ready", function() {
-  mainWindow = new BrowserWindow();
+  mainWindow = new BrowserWindow({
+    webPreferences: {
+      nodeIntegration: true
+    }
+  });
   mainWindow.loadURL(
     url.format({
       pathname: path.join(__dirname, "./HTML/mainWindow.html"),
@@ -33,15 +37,15 @@ const mainMenuTemp = [
   {
     label: "File",
     submenu: [
-    //   {
-    //     label: "Add Item",
-    //     click() {
-    //       creatAddWindow();
-    //     }
-    //   },
-    //   {
-    //     label: "Clear Items"
-    //   },
+      //   {
+      //     label: "Add Item",
+      //     click() {
+      //       creatAddWindow();
+      //     }
+      //   },
+      //   {
+      //     label: "Clear Items"
+      //   },
       {
         label: "Quit",
         accelerator: (process.platform = "ctrl+Q"),
@@ -53,27 +57,22 @@ const mainMenuTemp = [
   }
 ];
 
-
-
-
-
 // Add developer tools
 
-if (process.env.NODE_ENV != 'production') {
+if (process.env.NODE_ENV != "production") {
   mainMenuTemp.push({
-      label: 'Developer Tools',
-      submenu: [
-          {
-              label: 'Toggler Developer',
-              accelerator: process.platform == 'darwin' ? 'Command + I' : 'CTRL + I',
-              click(item, focusedWindow) {
-                  focusedWindow.toggleDevTools();
-              }
-          },
-          {
-              label: 'Reload'
-          }
-      ]
-  })
+    label: "Developer Tools",
+    submenu: [
+      {
+        label: "Toggler Developer",
+        accelerator: process.platform == "darwin" ? "Command + I" : "CTRL + I",
+        click(item, focusedWindow) {
+          focusedWindow.toggleDevTools();
+        }
+      },
+      {
+        label: "Reload"
+      }
+    ]
+  });
 }
-
