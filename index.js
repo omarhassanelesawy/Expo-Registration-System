@@ -8,12 +8,7 @@ let mainWindow;
 let addWindow;
 
 app.on("ready", function() {
-  mainWindow = new BrowserWindow({
-    webPreferences:{
-      nodeIntegration:true
-    }
-    
-  });
+  mainWindow = new BrowserWindow();
   mainWindow.loadURL(
     url.format({
       pathname: path.join(__dirname, "./HTML/mainWindow.html"),

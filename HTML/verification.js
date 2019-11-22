@@ -41,15 +41,8 @@ var successAppearance = () => {
     var div = document.querySelector(".alert-success");
     document.querySelector(".alert-danger").classList.replace("d-block","d-none");
     div.classList.replace("d-none", "d-block");
-    // Object to be submitted
-    let mainObj = {
-        mail: email.value.toLowerCase(),
-        day: "Day-"+select.value,
-        event: "ACES Expo"
-    }
     email.value = "";
     but.disabled = true;
-    console.log(mainObj);
     setTimeout(() => {
         div.classList.replace("d-block", "d-none");
     }, 5000);
