@@ -13,22 +13,26 @@ function init_Folder() {
   }
 }
 init_Folder();
-const name = path + "/" + os.hostname() + "DAY" + data.day + ".txt";
 // Add to specific file a content
 function append_data(data) {
+  const name = path + "/" + os.hostname() + "DAY" + data.day + ".txt";
+  console.log(name);
   fs.appendFile(name, JSON.stringify(data) + ",", function(err) {
     if (err) throw err;
     console.log("Saved!");
   });
 }
+append_data({ email: "abdo", day: 1 });
 function read_data(day) {
   const name = path + "/" + os.hostname() + "DAY" + day + ".txt";
-
+  console.log(name);
   if (fs.existsSync(name)) {
-    fs.readFile(name, function read(err, data) {
+    fs.readFile(name, "utf8", function read(err, data) {
       if (err) {
         throw err;
       }
+      if (data == "") return [];
+      console.log(data);
       content = "[" + data.substring(0, data.length - 1) + "]";
       return JSON.parse(content);
     });
@@ -36,6 +40,7 @@ function read_data(day) {
     return [];
   }
 }
+setTimeout(read_data, 3000, 1);
 // Get items from dom
 const form = document.querySelector("form");
 let email = document.querySelector(".form-control");
