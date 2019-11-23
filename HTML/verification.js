@@ -22,25 +22,25 @@ function append_data(data) {
     console.log("Saved!");
   });
 }
-append_data({ email: "abdo", day: 1 });
+// append_data({ email: "abdo", day: 1 });
 function read_data(day) {
   const name = path + "/" + os.hostname() + "DAY" + day + ".txt";
-  console.log(name);
+  // console.log(name);
   if (fs.existsSync(name)) {
     fs.readFile(name, "utf8", function read(err, data) {
       if (err) {
         throw err;
       }
       if (data == "") return [];
-      console.log(data);
       content = "[" + data.substring(0, data.length - 1) + "]";
+      console.log(JSON.parse(content));
       return JSON.parse(content);
     });
   } else {
     return [];
   }
 }
-setTimeout(read_data, 3000, 1);
+// setTimeout(read_data, 3000, 1);
 // Get items from dom
 const form = document.querySelector("form");
 let email = document.querySelector(".form-control");
@@ -73,8 +73,22 @@ but.addEventListener("click", e => {
   else dangerAppearance();
 });
 
+// function checkRedundancy(obj) {
+//   console.log(read_data(obj.day));
+//   if (true)
+//     return true;
+//   else return false;
+// }
+
 var successAppearance = () => {
   var div = document.querySelector(".alert-success");
+  var mainObj = {
+    email: email.value.toLowerCase(),
+    day: ""+select.value,
+    event: "ACES Expo"
+  };
+  // checkRedundancy(mainObj);
+  append_data(mainObj);
   document
     .querySelector(".alert-danger")
     .classList.replace("d-block", "d-none");
